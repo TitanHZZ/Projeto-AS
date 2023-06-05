@@ -1,0 +1,93 @@
+CREATE TABLE Users(
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   user TEXT,
+   password TEXT,
+   token TEXT,
+   soldItemsIds TEXT,
+   purchasedItemsIds TEXT, // "0;6;3;8;2"
+   paymentCards TEXT       // "CREDIT CARD,XXXX - XXXX - XXXX - 4958;PAYPAL,XXXX - XXXX - XXXX - 0264"
+);
+
+CREATE TABLE Items(
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   name TEXT,
+   imgName TEXT,
+   description TEXT,
+   price REAL,
+   verified TEXT,
+   mainMaterial TEXT,
+   condition TEXT,
+   originDate TEXT,
+   highlighted TEXT,
+   sellerId INTEGER
+);
+
+CREATE TABLE SoldItems(
+   userId INTEGER,
+   name TEXT,
+   cities TEXT,
+   currentCity INTEGER
+);
+
+CREATE TABLE Auctions(
+   name TEXT,
+   image TEXT,
+   startDate TEXT,
+   endDate TEXT,
+   initialPrice REAL,
+   userId INTEGER
+);
+// String description
+// bool needsVerification
+// String mainMaterial
+// String condition
+// String originDate
+// String email
+// String message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Collection(
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   name TEXT,
+   IdImg TEXT
+);
+
+CREATE TABLE Img(
+   IdImg INTEGER PRIMARY KEY AUTOINCREMENT,
+   path TEXT,
+   comment TEXT
+);
+
+CREATE TABLE ServerImgs(
+   IdImg INTEGER PRIMARY KEY AUTOINCREMENT,
+   path TEXT
+);
+
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-03.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-04.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-05.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-06.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-01.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-02.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-07.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-08.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-09.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-10.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-11.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-12.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-13.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-14.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-15.jpg");
+INSERT INTO ServerImgs(path) VALUES ("../img/html/img-16.jpg");
